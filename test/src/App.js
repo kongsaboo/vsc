@@ -28,7 +28,10 @@ const styles = theme => ({
 
 
 class App extends Component {
-  
+  state = {
+    customers: '',
+    completed: 0
+  }
 
   componentDidMount() {
     this.timer = setInterval(this.progress, 20);
@@ -54,8 +57,7 @@ class App extends Component {
 
 
   render() {
-
-
+    
     const { classes } = this.props
     return (
       <Paper className={classes.root}>
